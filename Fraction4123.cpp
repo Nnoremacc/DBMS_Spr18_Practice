@@ -88,9 +88,3 @@ ostream & operator<<(ostream &out, Fraction4123 f){
   return out;
 }
 
-int main(){
-
-	int x = 20;
-	int y = 35;
-	cout << "GCD of: " << x << " and " << y << " is " << gcd(x, y);
-}
