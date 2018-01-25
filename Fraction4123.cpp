@@ -41,8 +41,16 @@ void Fraction4123::setDenominator(int d){
 
 // 5.  Implement the gcd function recursively
 int gcd(int x, int y){
-  return 1;
+
+	if (y != 0){
+		return gcd(y, x % y);
+	}
+
+	else {
+		return x;
+	}
 }
+
 //6.  Implement function to simplify fraction
 void simplify();
 
@@ -78,4 +86,11 @@ ostream & operator<<(ostream &out, Fraction4123 f){
       out << whole << " " << f.num % f.den << "/" << f.getDenominator();
   }
   return out;
+}
+
+int main(){
+
+	int x = 20;
+	int y = 35;
+	cout << "GCD of: " << x << " and " << y << " is " << gcd(x, y);
 }
